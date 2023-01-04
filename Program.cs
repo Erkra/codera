@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace project0
 {
@@ -47,16 +47,18 @@ namespace project0
                 Console.WriteLine("Guesses: " + guesses);
                 Console.WriteLine("Number was: " + number);
 
-                Console.WriteLine("Would you like to play again: (Y/N): ");
-                Console.ReadLine();
+                Console.WriteLine("Would you like to play again <Y/N> : ");
+                response = Console.ReadLine() ?? "";
                 response = response.ToUpper();
 
                 if (response == "Y")
                 {
+                    Console.Clear();
                     playAgain = true;
                 }
                 else
                 {
+                    Console.Clear();
                     playAgain = false;
                 }
             }
@@ -64,9 +66,9 @@ namespace project0
 
             Console.WriteLine("Thanks for playing!");
 
-            Console.ReadKey();
+            Thread.Sleep(3000);
 
-            
+
         }
     }
 }
